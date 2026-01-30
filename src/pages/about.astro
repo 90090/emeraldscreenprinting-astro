@@ -1,0 +1,257 @@
+---
+import '../styles/global.css'
+import Layout from '../layouts/Layout.astro';
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+---
+
+
+<Layout title="About | Emerald Screen Printing | Custom Apparel & Merchandise" description="Emerald Screen Printing creates custom t-shirts, apparel, and promotional products with high-quality printing and embroidery. Serving businesses, schools, and events." canonical="https://emeraldscreenprinting.com/about">
+    <Fragment slot="head">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://emeraldscreenprinting.com/#business",
+            "name": "Emerald Screen Printing",
+            "url": "https://emeraldscreenprinting.com",
+            "logo": "https://emeraldscreenprinting.com/logo_color.png",
+            "image": [
+            "https://emeraldscreenprinting.com/banner/shoppic1.webp",
+            "https://emeraldscreenprinting.com/banner/shoppic2.webp",
+            "https://emeraldscreenprinting.com/banner/shoppic3.webp"
+            ],
+            "telephone": "(860) 919-8449",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 Deborah Lane",
+            "addressLocality": "Farmington",
+            "addressRegion": "CT",
+            "postalCode": "06032",
+            "addressCountry": "US"
+            },
+            "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Connecticut"
+            },
+            "description": "Emerald Screen Printing provides custom screen printing, embroidery, and branded apparel for businesses, schools, teams, and events across Connecticut.",
+            "sameAs": [
+            "https://www.facebook.com/emeraldscreenprintingandembroidery",
+            "https://www.instagram.com/emeraldscreenprintingct/"
+            ]
+        },
+        {
+            "@type": "Product",
+            "@id": "https://emeraldscreenprinting.com/#screen-printing",
+            "name": "Custom Screen Printing",
+            "description": "High-quality custom screen printing on t-shirts, hoodies, long sleeves, and promotional apparel.",
+            "brand": { "@type": "Brand", "name": "Emerald Screen Printing" },
+            "image": "https://emeraldscreenprinting.com/customers/dynamictree2.webp",
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "8.00",
+            "availability": "https://schema.org/InStock",
+            "url": "https://emeraldscreenprinting.com/contact"
+            }
+        },
+        {
+            "@type": "Product",
+            "@id": "https://emeraldscreenprinting.com/#embroidery",
+            "name": "Custom Embroidery",
+            "description": "Professional embroidery services for uniforms, hats, jackets, and branded apparel.",
+            "brand": { "@type": "Brand", "name": "Emerald Screen Printing" },
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://emeraldscreenprinting.com/contact"
+            }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://emeraldscreenprinting.com/#review-anthony",
+            "author": { "@type": "Person", "name": "Anthony" },
+            "reviewBody": "Jeff has been making our apparel for years now and he never disappoints. He's easier to deal with than the larger companies and has the best pricing around.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://emeraldscreenprinting.com/#business" }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://emeraldscreenprinting.com/#review-jordan",
+            "author": { "@type": "Person", "name": "Jordan Tonn" },
+            "reviewBody": "Very responsive and kept me informed throughout the entire process. He met every deadline and we couldn’t be happier with the shirts.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://emeraldscreenprinting.com/#business" }
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://emeraldscreenprinting.com/#hero-image",
+            "contentUrl": "https://emeraldscreenprinting.com/banner/shoppic1.webp",
+            "description": "Inside Emerald Screen Printing shop producing custom apparel",
+            "creator": { "@type": "Organization", "name": "Emerald Screen Printing" }
+        }
+        ]
+    }
+    </script>
+    </Fragment>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl space-y-20">
+      {/* Header Section */}
+      <div class="space-y-8">
+        {/* Text + Shop Photo */}
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Text */}
+          <div>
+            <h1 class="text-5xl font-extrabold text-emerald-700 mb-4">
+              More Than Ink. <br /> <span class="text-black">It's Personal.</span>
+            </h1>
+            <div class="flex justify-center">
+              <img
+                src="/logo_color.webp"
+                loading="lazy"
+                alt="Emerald Screen Printing Logo"
+                class="w-40 h-40 object-contain"
+              />
+            </div>
+            <p class="text-lg text-gray-600">
+              At Emerald Screen Printing & Embroidery, we blend the precision of a professional print shop with the
+              personal touch of a hands-on craftsman. Our standards are sky-high, our equipment is
+              top-tier, and our reputation is built on quality and trust.
+            </p>
+            <p class="text-lg text-gray-600 mt-4">
+              We specialize in custom screen printing for apparel such as T-shirts, hoodies, caps
+              and more. Offering creative support and a seamless ordering experience from start to
+              finish, whether you're a small business, school, organization, or someone with a big
+              idea, we print every item like it's our own.
+            </p>
+          </div>
+
+          {/* Shop Photo */}
+          <div class="flex justify-center">
+            <img
+              src="/jeff2.webp"
+              loading="lazy"
+              alt="Emerald Screen Printing Shop"
+              class="w-full max-w-md rounded-xl shadow-lg object-cover rotate-90"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Video Section - Portrait fix */}
+      <h2 class="text-3xl text-center font-bold text-emerald-700 m-4">About Us</h2>
+      <div class="mx-auto overflow-hidden rounded-2xl shadow-2xl max-w-4xl">
+        <video
+            src={'/aboutusvideo.mp4'}
+            controls
+            playsinline
+            class="w-full object-cover rounded-2xl"
+        >
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+      {/* Local Business Section */}
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-emerald-700 m-4">Proudly Local</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          Emerald Screen Printing is a family-owned local business, deeply rooted in the Farmington community. We take pride
+          in treating every order with the same care and attention we'd want ourselves because for us, it's not just printing.
+          It's personal.
+        </p>
+      </div>
+
+      {/* Original Shop Sign Section */}
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img
+            src="/originalsign.webp" 
+            alt="Original Shop Sign"
+            loading="lazy"
+            class="rounded-xl shadow-lg w-full object-cover"
+          />
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold text-emerald-700">Humble Beginnings</h3>
+          <p class="text-gray-700 text-lg">
+            This original sign hung outside the very first shop, a reminder of where it all started. What began in a backyard shed
+            with passion and a vision has grown into a trusted brand serving hundreds of customers over the years.
+          </p>
+        </div>
+      </div>
+
+      {/* History */}
+      <div>
+        <h2 class="text-3xl font-bold text-emerald-700 mb-4">Our History</h2>
+        <div class="space-y-4 text-gray-700">
+          <p>
+            The journey began back in 1989 with Jeff Elmer's first company, called Home Plate Sports,
+            focused on sporting goods and uniforms. With a growing demand and opportunity in
+            imprinted T-shirts and sweatshirts, he partnered with a screen printer. To continue to grow
+            Jeff made a pivotal decision to build more and buy the equipment and print in-house.
+          </p>
+          <p>
+            While living in Southington, a backyard shed became the birthplace of a full-fledged print
+            operation. While working full-time at ESPN during the night shift (4 PM–12 AM), daytime hours
+            were spent printing orders and building a loyal customer base.
+          </p>
+          <p>
+            Eventually, the business outgrew the shed, leading to a commercial facility in Southington,
+            a team of employees, and bigger monthly bills. Growth continued, prompting another move to a
+            larger location down the street and the addition of embroidery services.
+          </p>
+          <p>
+            Balancing a full-time job at ESPN with running a busy screen-printing shop was no small task,
+            and in 2000, the business was sold. But the passion never left. After a few years off and moving to Farmington in 2003, a new partnership was formed with a
+            longtime ESPN colleague, running strong for six more years.
+          </p>
+          <p>
+            Following a 29.5-year career at ESPN, retirement in 2016 didn't last long. By 2017, the third
+            chapter of the screen printing story had begun, and Emerald Screen Printing was born.
+          </p>
+          <p class="font-semibold text-emerald-700">
+            This isn't just a job. It's a craft. A commitment. A calling.
+          </p>
+          <p>
+            And through every chapter, the goal has remained the same: serve with integrity, deliver with
+            pride, and print like we're the customer.
+          </p>
+        </div>
+      </div>
+
+      {/* Owner Portrait Image */}
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1 space-y-4">
+          <h3 class="text-2xl font-semibold text-emerald-700">Crafted With Care</h3>
+          <p class="text-gray-700 text-lg">
+            Jeff, the heart behind Emerald, brings energy and pride into every print. This photo taken mid-print,
+            captures what we believe in: that the process is just as important as the product.
+          </p>
+          <p class="text-gray-700 text-lg italic">“We print like we're the customer.”</p>
+        </div>
+        <div class="order-1 md:order-2">
+          <img
+            src="/smiling.webp"
+            alt="Owner Smiling Making Shirts"
+            loading="lazy"
+            class="rounded-xl shadow-lg object-cover w-full max-h-[600px] rotate-90"
+          />
+        </div>
+      </div>
+
+      {/* Social Media */}
+      <div class="text-center space-y-4">
+        <h2 class="text-2xl font-bold text-emerald-700">Follow Us Behind the Scenes</h2>
+        <p class="text-gray-600">See what's hot off the press:</p>
+        <div class="flex justify-center space-x-6 text-emerald-700">
+          <a href="https://www.instagram.com/emeraldscreenprintingct/" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-700">
+            <FaInstagram className="w-8 h-8" />
+          </a>
+          <a href="https://www.facebook.com/emeraldscreenprintingandembroidery" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-700">
+            <FaFacebookF className="w-8 h-8" />
+          </a>
+        </div>
+      </div>
+    </main>
+</Layout>

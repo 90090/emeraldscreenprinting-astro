@@ -1,0 +1,136 @@
+---
+import '../styles/global.css'
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.jsx';
+
+
+---
+
+<Layout title="Contact | Emerald Screen Printing | Custom Apparel & Merchandise" description="Emerald Screen Printing creates custom t-shirts, apparel, and promotional products with high-quality printing and embroidery. Serving businesses, schools, and events." canonical="https://emeraldscreenprinting.com/about">
+    <Fragment slot="head">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://emeraldscreenprinting.com/#business",
+            "name": "Emerald Screen Printing",
+            "url": "https://emeraldscreenprinting.com",
+            "logo": "https://emeraldscreenprinting.com/logo_color.png",
+            "image": [
+            "https://emeraldscreenprinting.com/banner/shoppic1.webp",
+            "https://emeraldscreenprinting.com/banner/shoppic2.webp",
+            "https://emeraldscreenprinting.com/banner/shoppic3.webp"
+            ],
+            "telephone": "(860) 919-8449",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 Deborah Lane",
+            "addressLocality": "Farmington",
+            "addressRegion": "CT",
+            "postalCode": "06032",
+            "addressCountry": "US"
+            },
+            "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Connecticut"
+            },
+            "description": "Emerald Screen Printing provides custom screen printing, embroidery, and branded apparel for businesses, schools, teams, and events across Connecticut.",
+            "sameAs": [
+            "https://www.facebook.com/emeraldscreenprintingandembroidery",
+            "https://www.instagram.com/emeraldscreenprintingct/"
+            ]
+        },
+        {
+            "@type": "Product",
+            "@id": "https://emeraldscreenprinting.com/#screen-printing",
+            "name": "Custom Screen Printing",
+            "description": "High-quality custom screen printing on t-shirts, hoodies, long sleeves, and promotional apparel.",
+            "brand": { "@type": "Brand", "name": "Emerald Screen Printing" },
+            "image": "https://emeraldscreenprinting.com/customers/dynamictree2.webp",
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "8.00",
+            "availability": "https://schema.org/InStock",
+            "url": "https://emeraldscreenprinting.com/contact"
+            }
+        },
+        {
+            "@type": "Product",
+            "@id": "https://emeraldscreenprinting.com/#embroidery",
+            "name": "Custom Embroidery",
+            "description": "Professional embroidery services for uniforms, hats, jackets, and branded apparel.",
+            "brand": { "@type": "Brand", "name": "Emerald Screen Printing" },
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://emeraldscreenprinting.com/contact"
+            }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://emeraldscreenprinting.com/#review-anthony",
+            "author": { "@type": "Person", "name": "Anthony" },
+            "reviewBody": "Jeff has been making our apparel for years now and he never disappoints. He's easier to deal with than the larger companies and has the best pricing around.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://emeraldscreenprinting.com/#business" }
+        },
+        {
+            "@type": "Review",
+            "@id": "https://emeraldscreenprinting.com/#review-jordan",
+            "author": { "@type": "Person", "name": "Jordan Tonn" },
+            "reviewBody": "Very responsive and kept me informed throughout the entire process. He met every deadline and we couldn’t be happier with the shirts.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "itemReviewed": { "@id": "https://emeraldscreenprinting.com/#business" }
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://emeraldscreenprinting.com/#hero-image",
+            "contentUrl": "https://emeraldscreenprinting.com/banner/shoppic1.webp",
+            "description": "Inside Emerald Screen Printing shop producing custom apparel",
+            "creator": { "@type": "Organization", "name": "Emerald Screen Printing" }
+        }
+        ]
+    }
+    </script>
+    </Fragment>
+
+
+    <section class="container mx-auto px-4 py-16 max-w-3xl animate-fadeIn space-y-12">
+      <head>
+       <title>Contact Emerald Screen Printing</title>
+       <meta name="description" content="Get in touch with Emerald Screen Printing for quotes, orders, or questions. Contact us today to start your custom t-shirt or promotional product project." />
+      </head>
+      {/* Header */}
+      <div class="text-center space-y-4"
+      >
+        <h2 class="text-4xl font-bold text-emerald-700">
+          Stand Out With Emerald Screen Printing
+        </h2>
+        <p class="text-gray-700 max-w-xl mx-auto">
+          Have a project in mind? Let us know what you're envisioning, we're ready to help bring
+          it to life on fabric.
+        </p>
+      </div>
+
+      {/* Contact Form */}
+      <div class="bg-gray-50 rounded-lg shadow p-6"
+      >
+        <ContactForm client:load/>
+      </div>
+
+      {/* Email Contact Info */}
+      <div class="text-center space-y-2"
+      >
+        <p class="text-sm text-gray-600">
+          You'll hear back from me within 1 - 3 hours. Let's make it happen.
+        </p>
+        <p class="text-sm text-gray-600">
+          Call or Text me at 860-919-8449 
+        </p>
+      </div>
+    </section>
+</Layout>
