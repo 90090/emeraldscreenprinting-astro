@@ -15,9 +15,6 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
 
-  const API_URL = "https://1nbp3s8fn9.execute-api.us-east-1.amazonaws.com/contact";
-  const API_KEY = "NiGnTQHvA8z4WxlMPeL7g7eU52Z6PP1l";
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -28,11 +25,10 @@ export default function ContactForm() {
     setSuccess(null);
 
     try {
-      const res = await fetch(API_URL, {
+      const res = await fetch("/contact-proxy.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": API_KEY,
         },
         body: JSON.stringify(form),
       });
